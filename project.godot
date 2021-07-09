@@ -11,7 +11,12 @@ config_version=4
 [application]
 
 config/name="Godot Wild Jam"
+run/main_scene="res://FirstScene.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GlobalVariables="*res://GlobalVariables.gd"
 
 [physics]
 
