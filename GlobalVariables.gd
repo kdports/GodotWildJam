@@ -3,6 +3,8 @@ extends Node
 
 # I've set this up to store information we need between scenes. Yay
 var dash_multiplier = 20
+var arrangement = 0
+var hacking_lives = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

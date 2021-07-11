@@ -18,6 +18,7 @@ func _ready():
 	sprite.animation = "default"
 	dir = "r"
 	
+	
 func _process(delta):
 	var velocity = Vector2()
 	
