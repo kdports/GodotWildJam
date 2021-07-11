@@ -1,0 +1,192 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://bluebox.png" type="Texture" id=1]
+[ext_resource path="res://PlayerBox.gd" type="Script" id=2]
+[ext_resource path="res://HackingGame.gd" type="Script" id=3]
+[ext_resource path="res://RedStar.gd" type="Script" id=5]
+[ext_resource path="res://YellowCircle.gd" type="Script" id=7]
+[ext_resource path="res://GreenTriangle.gd" type="Script" id=9]
+[ext_resource path="res://Ending.gd" type="Script" id=10]
+[ext_resource path="res://ending.png" type="Texture" id=11]
+[ext_resource path="res://config1.png" type="Texture" id=12]
+[ext_resource path="res://Config1.gd" type="Script" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 34.3099, 32.8198 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 245.351, 4.85948 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 4.97992, 142.016 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 82.7112, 5.00067 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 108.14, 5.09271 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 5.04181, 29.7103 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 5.04803, 43.9167 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 51.1269, 1.00229 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 21.8525, 5.02769 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="PlayerBox" type="Area2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="PlayerBox"]
+position = Vector2( 35.3197, 26.1921 )
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBox"]
+position = Vector2( 35.3953, 26.4285 )
+shape = SubResource( 2 )
+
+[node name="RedStar" type="Area2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedStar"]
+position = Vector2( 473.029, 37.7479 )
+shape = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="RedStar"]
+position = Vector2( 473.121, 37.6452 )
+frames = SubResource( 4 )
+
+[node name="YellowCircle" type="Area2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YellowCircle"]
+position = Vector2( 43.7361, 101.319 )
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YellowCircle"]
+position = Vector2( 43.7802, 101.609 )
+shape = SubResource( 2 )
+
+[node name="GreenTriangle" type="Area2D" parent="."]
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GreenTriangle"]
+position = Vector2( 42.1723, 246.241 )
+shape = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="GreenTriangle"]
+position = Vector2( 42.149, 246.232 )
+frames = SubResource( 5 )
+
+[node name="Ending" type="Area2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ending"]
+position = Vector2( 922.69, 542.32 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Ending"]
+position = Vector2( 923.038, 543.344 )
+texture = ExtResource( 11 )
+
+[node name="Config1" type="Area2D" parent="."]
+script = ExtResource( 13 )
+
+[node name="Sprite" type="Sprite" parent="Config1"]
+position = Vector2( 504.959, 303.666 )
+texture = ExtResource( 12 )
+
+[node name="t" type="CollisionShape2D" parent="Config1"]
+position = Vector2( 261.148, 2.96404 )
+shape = SubResource( 6 )
+
+[node name="b" type="CollisionShape2D" parent="Config1"]
+position = Vector2( 258.759, 294.085 )
+shape = SubResource( 6 )
+
+[node name="r" type="CollisionShape2D" parent="Config1"]
+position = Vector2( 502.52, 146.707 )
+shape = SubResource( 7 )
+
+[node name="l" type="CollisionShape2D" parent="Config1"]
+position = Vector2( 10.848, 150.578 )
+shape = SubResource( 7 )
+
+[node name="1" type="CollisionShape2D" parent="Config1"]
+position = Vector2( 89.8627, 195.251 )
+shape = SubResource( 8 )
+
+[node name="2" type="CollisionShape2D" parent="Config1"]
+position = Vector2( 158.528, 130.05 )
+shape = SubResource( 8 )
+
+[node name="3" type="CollisionShape2D" parent="Config1"]
+position = Vector2( 121.277, 73.0174 )
+shape = SubResource( 9 )
+
+[node name="4" type="CollisionShape2D" parent="Config1"]
+position = Vector2( 377.208, 92.2103 )
+shape = SubResource( 10 )
+
+[node name="5" type="CollisionShape2D" parent="Config1"]
+position = Vector2( 236.245, 174.148 )
+shape = SubResource( 11 )
+
+[node name="6" type="CollisionShape2D" parent="Config1"]
+position = Vector2( 118.823, 247.04 )
+shape = SubResource( 12 )
+
+[node name="7" type="CollisionShape2D" parent="Config1"]
+position = Vector2( 476.278, 90.0452 )
+shape = SubResource( 13 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 32, 32 )
+
+[node name="Camera2D" type="Camera2D" parent="Viewport"]
+current = true
+drag_margin_left = 0.25
+drag_margin_top = 0.26
+drag_margin_bottom = 0.26
+editor_draw_drag_margin = true
+
+[connection signal="area_entered" from="PlayerBox" to="." method="_on_PlayerBox_area_entered"]

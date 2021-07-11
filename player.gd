@@ -32,7 +32,7 @@ func _process(delta):
 		velocity.y = -5
 
 	if Input.is_key_pressed(KEY_SHIFT):
-		dm = 10
+		dm = GlobalVariables.dash_multiplier
 
 	position = position + velocity.normalized()*MOVEMENT_CONSTANT* \
 		delta*dm
