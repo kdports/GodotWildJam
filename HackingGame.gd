@@ -29,12 +29,14 @@ func _ready():
 func _process(delta):
 	camera.position.x = player.position.x
 	camera.position.y = player.position.y
-
-func _on_PlayerBox_area_entered(area):
-	if area.type == "wall":
-		print("FAIL")
+	
+func _on_PlayerBox_body_entered(body):
+	if body.type == "wall":
+		print("WALL FAIL")
 		hacking_failure()
 		#Add a GUI call here
+
+func _on_PlayerBox_area_entered(area):
 	if area.type == "red":
 		print(1)
 		red_obtained = 1

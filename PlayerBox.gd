@@ -1,6 +1,6 @@
 extends Area2D
 
-export var MOVEMENT_CONSTANT = 170
+export var MOVEMENT_CONSTANT = 190
 var screen_size
 var dir
 var dir_dict = {
