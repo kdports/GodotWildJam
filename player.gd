@@ -1,6 +1,6 @@
 extends Area2D
 
-export var MOVEMENT_CONSTANT = 200
+export var MOVEMENT_CONSTANT = 160
 var dm = GlobalVariables.dash_multiplier
 var screen_size
 
