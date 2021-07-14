@@ -16,6 +16,9 @@ var spawn_locations = {
 	7: [-60, 442]
 }
 var all_enemies = []
+var all_projectiles = []
+
+var bullet = preload("res://Bullet.tscn")
 
 var enemy1 = preload("res://enemy1.tscn")
 var enemy_list = [enemy1]
@@ -25,8 +28,24 @@ func _ready():
 	# Creates initial enemies
 	spawn_enemies()
 	
-func _process(delta):
+func _input(event):
+   # Mouse in viewport coordinates.
+	if event is InputEventMouseButton and event.is_pressed():
+		var b = bullet.instance()
+		add_child(b)
+		b.position = player.get_position()
+		
+		var x_speed = 0
+		var y_speed = 0
+		x_speed = (event.position.x - b.position.x)/50
+		y_speed = (event.position.y - b.position.y)/50
+		all_projectiles.append([b, x_speed, y_speed])
+	
+func _process(_delta):
 	# Moves the enemies closer to fuel
+	for p in all_projectiles:
+		p[0].position.x += p[1]
+		p[0].position.y += p[2]
 	for e in all_enemies:
 		e[0].position.x += e[1]
 		e[0].position.y += e[2]
@@ -74,6 +93,6 @@ func spawn_enemies():
 		i += 1
 
 func _on_Fuel_area_entered(area):
-	if area != player:
+	if area != player and area.type != "bullet":
 		player.queue_free()
 		fuel.queue_free()

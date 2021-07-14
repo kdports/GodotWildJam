@@ -100,4 +100,6 @@ texture = ExtResource( 2 )
 position = Vector2( 0.593044, 0.0578327 )
 shape = SubResource( 11 )
 
+[node name="Bullets" type="Node2D" parent="."]
+
 [connection signal="area_entered" from="Fuel" to="." method="_on_Fuel_area_entered"]

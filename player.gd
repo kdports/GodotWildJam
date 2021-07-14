@@ -11,6 +11,7 @@ var UP_ANIM_START = 6
 var UP_ANIM_END = 7
 
 onready var sprite = $AnimatedSprite
+var type
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
