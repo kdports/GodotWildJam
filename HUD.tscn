@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Calculatrix7Regular-zEM1.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://HUD0000.png" type="Texture" id=2]
+[ext_resource path="res://HUD.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+outline_size = 2
+outline_color = Color( 0.301961, 0.298039, 0.298039, 1 )
+font_data = ExtResource( 1 )
+
+[node name="HUD" type="MarginContainer"]
+light_mask = 7
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -374.0
+margin_bottom = -541.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="NinePatchRect" parent="."]
+margin_right = 650.0
+margin_bottom = 59.0
+texture = ExtResource( 2 )
+
+[node name="Flabel" type="RichTextLabel" parent="TextureRect"]
+margin_left = 122.0
+margin_top = 14.0
+margin_right = 188.0
+margin_bottom = 51.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0.843137, 0.0941176, 0.0941176, 1 )
+tab_size = 5
+text = "5"
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slabel" type="RichTextLabel" parent="TextureRect"]
+margin_left = 370.0
+margin_top = 14.0
+margin_right = 436.0
+margin_bottom = 51.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0.843137, 0.0941176, 0.0941176, 1 )
+tab_size = 5
+text = "5"
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dlabel" type="RichTextLabel" parent="TextureRect"]
+margin_left = 544.0
+margin_top = 14.0
+margin_right = 610.0
+margin_bottom = 50.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0.843137, 0.0941176, 0.0941176, 1 )
+tab_size = 5
+text = "5"
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
